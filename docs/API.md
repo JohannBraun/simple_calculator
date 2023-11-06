@@ -1,27 +1,66 @@
 # API.md
 
-## Calculator Module
+## Simple Calculator API
 
-This module provides basic mathematical operations.
+This API provides basic mathematical operations. It is built using Flask and can be run locally or in a Docker container.
 
-### `add(a, b)`
+### `POST /add`
 
 Adds two numbers together.
 
-**Parameters:**
+**Request Body:**
 
-- `a`: The first number.
-- `b`: The second number.
+- `a`: The first number (required).
+- `b`: The second number (required).
 
-**Returns:** The sum of `a` and `b`.
+**Response Body:**
 
-### `subtract(a, b)`
+- `result`: The sum of `a` and `b`.
 
+**Example:**
+
+Request:
+
+```
+{
+    "a": 5,
+    "b": 3
+}
+```
+
+Response:
+
+```
+{
+    "result": 8
+}
+```
+
+### POST /subtract
 Subtracts the second number from the first.
 
-**Parameters:**
+**Request Body:**
 
-- `a`: The first number.
-- `b`: The second number.
+- `a`: The first number (required).
+- `b`: The second number (required).
 
-**Returns:** The result of `a - b`.
+**Response Body:**
+
+- `result`: The result of `a - b`.
+
+**Example:**
+
+
+Request:
+```
+{
+    "a": 5,
+    "b": 3
+}
+```
+Response:
+```
+{
+    "result": 2
+}
+```
